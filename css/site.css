@@ -15,6 +15,7 @@ h2,
 h1 {
     text-transform: uppercase;
     font-size: 3em;
+    text-shadow: 5px 3px #000;
 }
 
 .titulo-principal {
@@ -23,13 +24,13 @@ h1 {
     color: #FFF;
     padding: 2rem;
     border-bottom: .5rem solid #000;
-    position: relative;
-}
 
+}
 
 .subtitulo-texto {
     font-size: 1.5em;
     clear: both;
+    text-shadow: 5px 3px #000;
 }
 
 main a {
@@ -60,7 +61,7 @@ main p {
 }
 
 .rodape-pagina {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.8);
     color: #F2FFFC;
     padding: 1em;
     clear: both;
@@ -134,4 +135,5 @@ main {
     top: 0;
     right: 0;
     height: 300px;
+    
 }
