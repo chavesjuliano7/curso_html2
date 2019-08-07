@@ -37,6 +37,8 @@ main a {
     color: #851944;
 }
 
+
+
 main p {
     text-align: justify;
     margin: 1em 0;
@@ -130,6 +132,11 @@ main {
     top: 300px;
 }
 
+.navegacao-site .navegacao-link a:hover,
+.navegacao-site .navegacao-link a:focus{
+    text-shadow: 0px 0px 2px pink;
+}
+
 .minha-foto {
     position: absolute;
     top: 0;
@@ -137,3 +144,43 @@ main {
     height: 300px;
     
 }
+
+main a:hover,
+main a:focus{
+    color: red;
+}
+
+.rodape-pagina a:hover,
+.rodape-pagina a:focus{
+    color:red;
+}
+
+
+.icones-redes-sociais a {
+    position: relative;
+
+}
+
+.icones-redes-sociais a:hover::after,
+.icones-redes-sociais a:focus::after {
+    content: attr(data-tolltip);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    text-indent: 0;
+    width: 300%;
+    background: black;
+    font-size: .75em;
+    
+}
+
+.icones-redes-sociais a:hover::before,
+.icones-redes-sociais a:focus::before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(.5em) rotate(45deg);}
