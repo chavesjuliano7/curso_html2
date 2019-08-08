@@ -1,0 +1,63 @@
+.formulario{
+    outline: none;
+}
+
+.dados-pessoais legend,
+.assunto legend,
+.mensagem legend {
+    font-weight: bold;
+    display: block;
+}
+
+.dados-pessoais input{
+    font-size: 0.8em;
+    line-height: 1.5;
+    height: 2em;
+    padding: 0 0.5em;
+    box-sizing: border-box;
+}
+
+
+
+.mensagem{
+    margin-top: 25px;
+}
+ 
+
+.dados-pessoais input, .mensagem textarea{
+    width: 100%;
+    border: solid 0.01em #aaa;
+}
+
+
+#nome:focus,
+#email:focus,
+.mensagem textarea:focus{
+    background-color: #fffba6;
+    outline: none;
+
+}
+.botao-enviar{
+    border: none;
+    font-family: "Open Sans Condensed", sans-serif;
+    text-transform: capitalize;
+    width: 25%;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: #3C1D3D;
+    color: #F2FFFC;
+    padding: 0.5em 1em;
+    display: block;
+    margin-left: auto;
+    margin-top: 1em;
+    
+}
+
+button:hover,
+button:focus {
+    background-color: #8C1D3D;
+}
+
+input:invalid {
+    box-shadow: 0 0 3px red;
+}
