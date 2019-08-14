@@ -5,6 +5,14 @@
     margin: 1em 2em;
     width: 30ch;
     box-sizing: border-box;
+    transition: box-shadow 1s, transform 1s;
+    -moz-transition: box-shadow 1s, transform 1s;
+    -ms-transition: box-shadow 1s, transform 1s;
+    -o-transition: box-shadow 1s, transform 1s;
+    -webkit-transition: box-shadow 1s, transform 1s;
+    transition-delay:  1s, 0s;
+    -webkit-transition-delay: 1s, 0s;
+
 }
 
 .citacao-bio:nth-of-type(even) {
@@ -20,16 +28,33 @@
 .citacao-bio:hover,
 .citacao-bio:focus {
     box-shadow: 0 0 0 99999px rgba(0,0,0,.8);
+    transition: box-shadow 1s, transform 1s;
+    -moz-transition: box-shadow 1s, transform 1s;
+    -ms-transition: box-shadow 1s, transform 1s;
+    -o-transition: box-shadow 1s, transform 1s;
+    -webkit-transition: box-shadow 1s, transform 1s;
+    transition-delay:  0s, 1s;
+    -webkit-transition-delay: 0s, 1s;
+
+
 }
 
 .citacao-bio:nth-of-type(odd):hover,
 .citacao-bio:nth-of-type(odd):focus {
-    transform: scale(1.2) rotate(5deg);
+    transform:  rotate(5deg) scale(1.2);
+    -webkit-transform:  rotate(5deg) scale(1.2);
+    -moz-transform:  rotate(5deg) scale(1.2);
+    -ms-transform:  rotate(5deg) scale(1.2);
+    -o-transform:  rotate(5deg) scale(1.2);
 }
 
 .citacao-bio:nth-of-type(even):hover,
 .citacao-bio:nth-of-type(even):focus {
-    transform: scale(1.2) rotate(-5deg);
+    transform:  rotate(-5deg) scale(1.2);
+    -webkit-transform:  rotate(-5deg) scale(1.2);
+    -moz-transform:  rotate(-5deg) scale(1.2);
+    -ms-transform:  rotate(-5deg) scale(1.2);
+    -o-transform:  rotate(-5deg) scale(1.2);
 }
 
 .container > p::first-letter {
@@ -51,4 +76,45 @@
 
 .citacao-bio > p {
     position: relative;
+}
+
+
+
+
+.tabela{
+    border-collapse: separate;
+    border-spacing: 0.25em;
+    padding: 1em;
+
+}
+
+.tabela th, 
+.tabela td{
+    font-family: "Crimson Text", "Times New Roman", serif;
+    padding: 1em;
+}
+.tabela-cabecalho tr th{
+
+    background-color: #3C1D3D;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.tabela-corpo th{
+    background-color: #851944;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.tabela-corpo td{
+
+    background-color: #EEE;
+}
+
+.tabela-corpo td[rowspan]{ 
+    text-align: center;
+    vertical-align: middle;
+    font-style: italic;
 }

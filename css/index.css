@@ -1,3 +1,7 @@
+body{
+    display: block;
+}
+
 .foto-home {
     height: 200px;
     border-radius: 50%;
@@ -24,9 +28,47 @@
     color: #851944;
     font-size: 4em;
     -webkit-transform: rotate(-5deg) skew(-10deg);
-            transform: rotate(-5deg) skew(-10deg);
+    transform: rotate(-5deg) skew(-10deg);
     display: inline-block;
+    position: relative;
+    animation: flutua 1s  infinite;
+    -webkit-animation: flutua 1s  infinite;
+    animation-direction: alternate;
+    -webkit-animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    
 }
+
+
+@keyframes flutua {
+    from{
+        top: - 5px;
+    }
+    to{
+        top: 5px;
+    }
+}
+
+@-webkit-keyframes flutua{
+
+    from{
+        top: - 5px;
+    }
+    to{
+        top: 5px;
+    }
+
+}
+
+.saudacao:hover em{
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+
+
+
 .botao-index {
     font-size: 1.25em;
     background-color: #851944;
@@ -40,6 +82,7 @@
 }
 .secao-inicio {
     padding: 2em;
+    background-color: #fff;
 }
 .secao-inicio h2 {
     font-size: 3em;
@@ -47,6 +90,8 @@
     margin-bottom: .5em;
     text-shadow: 2px 2px #000;
 }
+
+
 .trabalhos {
     background-color: #3C1D3D;
     border-top: .5em solid #000;
@@ -59,17 +104,39 @@
     color: #FFF;
 }
 .trabalhos ul {
-    overflow: hidden;
-    border: .5em solid black;
+    display: flex;
+
 }
 .trabalhos li {
-    float: left;
+   flex: 1;
     width: 33.333%;
+    border: .4em solid black;
 }
 .trabalhos img {
     width: 100%;
     display: block;
 }
+
+.trabalhos li:first-child{
+    order: 2;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+
+}
+.trabalhos li:first-child(2){
+    order: 1;
+
+  
+}
+
+.trabalhos li:last-child{
+    order: 3;
+}
+
+
 .blog {
     background-color: #999;
     position: relative;
@@ -105,7 +172,7 @@ footer a {
 main {
     width: 100%;
     padding-bottom: 0;
-    float: none;
+
 }
 html,body {
     overflow-x: hidden;
@@ -118,6 +185,7 @@ body {
             perspective-origin: 50% 160px;
 }
 .palavras-home {
+
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
     position: absolute;
@@ -132,7 +200,40 @@ body {
     font-size: 400%;
     color: rgba(255, 127, 127, .5);
     position: absolute;
+    animation: aparece 2s ;
+    -webkit-animation: aparece 2s ;
 }
+
+@keyframes aparece{
+    
+    from{
+        opacity: 0;
+        transform: scale(0)    ;
+        -webkit-transform: scale(0.001)    ;
+        -moz-transform: scale(0.001)    ;
+        -ms-transform: scale(0.001)    ;
+        -o-transform: scale(0.001)    ;
+    }
+
+}
+
+@-webkit-keyframes aparece{
+    
+    from{
+        opacity: 0;
+        transform: scale(0.0001);
+        -webkit-transform: scale(0.0001);
+        -moz-transform: scale(0.0001);
+        -ms-transform: scale(0.0001);
+        -o-transform: scale(0.0001);
+    }
+    
+}
+
+
+
+
+
 .eficiencia {
     top: 50%;
     left: 60%;
@@ -217,34 +318,37 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-
     line-height: 1;
-
-    /* largura = 14em */
-    /* altura = 3.5em */
-    /* tx = .707 * h - .707 * w + w */
-    /* ty = -.707 * h */
-    /* -webkit-transform: translate(6.5765em, -2.4745em) rotate(45deg);
-            transform: translate(6.5765em, -2.4745em) rotate(45deg); */
-        transform: translate(calc(.707 * (3.5em - 100%) + 100%), calc(-.707 * 3.5em)) rotate(45deg);
-        -webkit-transform: translate(calc(.707 * (3.5em - 100%) + 100%), calc(-.707 * 3.5em)) rotate(45deg);
-
+    /*largura=14em*//*altura=3.5em*//*tx=.707*h-.707*w+w*//*ty=-.707*h*//*-webkit-transform: translate(6.5765em, -2.4745em) rotate(45deg);
+    transform: translate(6.5765em, -2.4745em) rotate(45deg);
+    */transform: translate(calc(.707 * (3.5em - 100%) + 100%), calc(-.707 * 3.5em)) rotate(45deg);
+    -webkit-transform: translate(calc(.707 * (3.5em - 100%) + 100%), calc(-.707 * 3.5em)) rotate(45deg);
     -webkit-transform-origin: 0 0;
-            transform-origin: 0 0;
-
+    transform-origin: 0 0;
     width: 14em;
     padding: 1em 0;
     box-sizing: border-box;
-
     text-align: center;
     text-decoration: none;
     background-color: #3C1D3D;
     color: white;
     border: .25em solid black;
-
     font-size: 1.2em;
     font-family: "Open Sans Condensed", sans-serif;
+    
+    animation: aparece 0.5s;
+    -webkit-animation: aparece 0.5s;
+    animation-delay: 4s;
+    -webkit-animation-delay: 2s;
+    animation-fill-mode: backwards;
+    -webkit-animation-fill-mode: backwards;
 }
+
+
+
+
+
+
 .blog .inicio-post {
     position: absolute;
     top: 4em;

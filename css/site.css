@@ -3,6 +3,13 @@ body {
     background-color: #F2FFFC;
     font-size: 120%;
     line-height: 1.5;
+    display: flex;
+    flex-wrap: wrap
+
+}
+
+main{
+    flex: 1;
 }
 
 h1,
@@ -51,6 +58,9 @@ main p {
     background-color: #3C1D3D;
     color: #F2FFFC;
     padding: 1em;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .navegacao-site a {
@@ -142,10 +152,9 @@ main {
 
 .navegacao-site {
     width: calc(0.9 * 300px);
-    float: right;
     position: relative;
     top: 300px;
-}
+} 
 
 .minha-foto {
     position: absolute;
